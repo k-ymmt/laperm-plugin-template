@@ -1,0 +1,25 @@
+[package]
+name = "laperm-plugin-template"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+description = "Template for a Laperm Plugin: inserts the current date at the caret"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+laperm-plugin = { git = "https://github.com/k-ymmt/laperm-plugin-sdk.git", tag = "0.1.0" }
+serde = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "1"
+
+# Small, fast to load: Laperm interprets the module.
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

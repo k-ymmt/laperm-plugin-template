@@ -1,0 +1,22 @@
+{
+  "id": "insert-date",
+  "name": "Insert Date",
+  "version": "0.1.0",
+  "apiVersion": 1,
+  "description": "Inserts today's date at the caret.",
+  "author": "your name",
+  "authorUrl": "https://github.com/your-name",
+  "permissions": ["editor"],
+  "commands": [
+    { "id": "insert-date", "name": "Insert Date", "shortcut": "cmd+shift+d", "systemImage": "calendar" }
+  ],
+  "events": [],
+  "settings": [
+    { "key": "format", "label": "Format", "type": "enum", "default": "yyyy-MM-dd",
+      "options": [
+        { "value": "yyyy-MM-dd", "label": "2026-09-28" },
+        { "value": "yyyy/MM/dd", "label": "2026/09/28" },
+        { "value": "yyyyMMdd", "label": "20260928" }
+      ] }
+  ]
+}
